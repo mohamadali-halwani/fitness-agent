@@ -1,43 +1,75 @@
-# Exercise Planner
+# fitness-agent
 
-This project provides a desktop application that generates daily exercise and diet plans using a generative AI backend. The user interface is built with `egui` via the `eframe` framework and features a translucent, morphic design.
+A simple Rust program that gives detailed exercise plans based on user's input.
 
-## Download
+## Features
+
+- Generates personalized exercise routines
+- Takes user preferences (e.g., fitness goals, available equipment, schedule) into account
+- Outputs detailed, actionable workout plans
+- Command-line interface (CLI)
+- [Add or modify features as your project evolves]
+
+## Getting Started
+
+### Prerequisites
+
+- [Rust](https://www.rust-lang.org/tools/install) (version X.Y.Z or newer recommended)
+
+### Building
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/mohamadali-halwani/fitness-agent.git
 cd fitness-agent
-```
-
-## Build
-
-The application uses the Rust toolchain. Install [Rust](https://www.rust-lang.org/tools/install) if you haven't already.
-
-```bash
 cargo build --release
 ```
 
-## Install & Run
-
-After building, run the application with:
+### Running
 
 ```bash
-cargo run --release
+cargo run -- [OPTIONS]
 ```
 
-Before running, set your OpenAI API key in the environment:
+Example:
 
 ```bash
-export OPENAI_API_KEY="your-api-key"
+cargo run -- --goal strength --days 3 --equipment dumbbells
 ```
-
-This key is required to generate the personalized plans.
 
 ## Usage
 
-Fill out your personal details in the application window and click **Generate Plan** to get a tailored workout and diet plan.
+Describe how users interact with your program. For example:
+
+- Launch the CLI and answer the prompts
+- Provide command-line arguments (see `--help` for details)
+
+```bash
+cargo run -- --help
+```
+
+## Example Output
+
+```
+Day 1:
+- Warm-up: 5 min brisk walk
+- Workout: 3x10 squats, 3x10 push-ups, 3x15 crunches
+...
+```
+
+## Contributing
+
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## Roadmap
+
+- [ ] Add support for nutrition plans
+- [ ] Integrate with wearable devices
+- [ ] Export plans to PDF/CSV
 
 ## License
 
-This project is licensed under the terms of the GNU GPLv3. See [LICENSE](LICENSE) for details.
+This project is licensed under the [GNU GPL v3](LICENSE).
 
+## Contact
+
+Created by [Mohamad Ali Halwani](https://github.com/mohamadali-halwani) – feel free to reach out!
